@@ -1,7 +1,30 @@
-dependencies {
-    compile group: 'org.springframework', name: 'spring-jdbc', version: springVersion
-    compile group: 'org.springframework', name: 'spring-web', version: springVersion
-    compile group: 'javax.servlet', name: 'javax.servlet-api', version: javaxServletVersion
-    compile group: 'org.xerial', name: 'sqlite-jdbc', version: sqliteJdbcVersion
+apply plugin: 'idea'
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter')
+
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: sqliteJdbcVersion
+}
