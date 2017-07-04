@@ -16,7 +16,7 @@ Run the app with:
     
     java -jar ./build/libs/mbtiles-server.jar
 
-In order to use a different mbiles file than the one specified in `application.properties` override this property with:
+In order to use a different mbiles file than the one specified in `application.properties` override the property with:
 
     java -jar -Dspring.datasource.url=jdbc:sqlite:/path/to/myMap.mbtiles ./build/libs/mbtiles-server.jar
 
