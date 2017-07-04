@@ -1,4 +1,10 @@
-package de.arnebosien.mbtiles.business.app;
+/*
+ * https://arnebosien.de
+ *
+ * Copyright 2017 Arne Bosien
+ * Licensed under MIT (https://github.com/abos/ab-samples/blob/master/LICENSE)
+ */
+package de.arnebosien.mbtiles.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
